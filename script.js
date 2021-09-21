@@ -9,17 +9,37 @@ function toggleMenu(){
 
 // Evento iframes
 
-let time = 3000,
-currentIframeIndex = 0,
-iframes = document.querySelectorAll('.iframe iframe');
+let videos = [
+    "https://flowpodcast.com.br",
+    "https://www.youtube.com/embed/FgqKjlfNEAE", 
+    "https://www.youtube.com/embed/fJFHAIQUG2c", 
+    "https://www.youtube.com/embed/A2tQUZAkSxk", 
+    "https://www.youtube.com/embed/KFPli-_27Wc", 
+    "https://www.youtube.com/embed/Tw0gOgXwbas", 
+    "https://www.youtube.com/embed/KdtDpFkNX-k"
+  ];
 
-button01 = document.getElementById('01');
-button02 = document.getElementById('02');
-button03 = document.getElementById('03');
-button04 = document.getElementById('04');
-button05 = document.getElementById('05');
-button06 = document.getElementById('06');
+let iframe = document.querySelector("#iframe");
+let btns = document.querySelectorAll("a");
 
-buttons = document.querySelectorAll('.navigation a');
+btns.forEach((a, index) => {
+  a.addEventListener("click", () => {
 
-console.log(buttons)
+    iframe.setAttribute(
+      "src", 
+      videos[index]
+    );
+  });
+});
+
+
+
+// btns.forEach(a => {
+//   a.addEventListener("click",() => {
+//     let url = a.getAttribute('data-url');
+//     iframe.setAttribute('src', url);
+//   });
+// });
+
+
+

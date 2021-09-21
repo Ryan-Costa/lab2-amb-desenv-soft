@@ -139,16 +139,13 @@ body {
 }
 
 .iframe iframe {
-  opacity: 0;
+  opacity: 1;
   position: relative;
   margin: 110px 0 0 0;
   width: 1440px;
   height: 720px;
 }
 
-.iframe iframe.selected{
-  opacity: 1;
-}
 
 
 
